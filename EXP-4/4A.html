@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selector Forms</title>
+  <style>
+    p { color: rgb(0, 0, 0); }
+    #idPara { color: rgb(255, 0, 0); }
+    .classPara { color: rgb(0, 128, 255); }
+    h1, h2 { color: rgb(0, 200, 0); }
+    * { font-family: Arial, sans-serif; }
+
+    div p { color: rgb(128, 0, 128); }
+    div > p { background-color: rgb(200, 255, 200); }
+    h2 + p { color: rgb(255, 128, 0); }
+    h2 ~ p { color: rgb(128, 64, 64); }
+
+    ul li:first-child { color: rgb(255, 0, 128); }
+    ul li:nth-child(2) { color: rgb(0, 128, 255); }
+    ul li:last-child { color: rgb(0, 200, 0); }
+    a:hover { color: rgb(255, 0, 0); }
+
+    .pseudo::first-letter {
+      font-size: 24px;
+      color: rgb(0, 0, 255);
+    }
+    .pseudo::after {
+      content: " [added with ::after]";
+      color: rgb(255, 0, 128);
+    }
+
+    a[href] { color: rgb(128, 0, 255); }
+    input[type="text"] {
+      border: 2px solid rgb(0, 200, 255);
+      background-color: rgb(240, 240, 240);
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Selector Forms</h1>
+
+  <p>This is a normal paragraph (element selector).</p>
+  <p id="idPara">This is styled with ID selector.</p>
+  <p class="classPara">This is styled with Class selector.</p>
+  <h2>Heading styled using Group selector</h2>
+
+  <div>
+    <p>Paragraph inside div (descendant + child).</p>
+  </div>
+  <h2>Combinator Example Heading</h2>
+  <p>This comes right after h2 (adjacent sibling).</p>
+  <p>This is a general sibling of h2.</p>
+
+  <ul>
+    <li>First item (first-child)</li>
+    <li>Second item (nth-child)</li>
+    <li>Third item (last-child)</li>
+  </ul>
+  <a href="#">Hover over this link</a><br><br>
+
+  <p class="pseudo">This demonstrates ::first-letter and ::after.</p>
+
+  <input type="text" placeholder="Type something...">
+  <a href="https://www.google.com">Google Link</a>
+</body>
+</html>

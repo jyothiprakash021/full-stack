@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Semantic HTML5 Layout Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+    }
+    header, nav, footer {
+      background-color: #333;
+      color: white;
+      padding: 1em;
+    }
+    nav a {
+      color: white;
+      margin-right: 1em;
+      text-decoration: none;
+    }
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 1em;
+    }
+    article {
+      flex: 2;
+      margin-right: 1em;
+      background-color: #f9f9f9;
+      padding: 1em;
+      border: 1px solid #ddd;
+    }
+    aside {
+      flex: 1;
+      background-color: #f0f0f0;
+      padding: 1em;
+      border: 1px solid #ccc;
+    }
+    section {
+      margin-bottom: 1em;
+    }
+    footer {
+      text-align: center;
+    }
+    figure {
+      margin: 0;
+    }
+    figcaption {
+      font-size: 0.9em;
+      color: #666;
+    }
+    .highlight {
+      background-color: yellow;
+    }
+    .small-text {
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Website</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#blog">Blog</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <header>
+        <h2>Article Title</h2>
+        <p class="small-text">By Alice on 25 September 2025</p>
+      </header>
+
+      <section>
+        <p>This is the first paragraph of the article. It introduces the main topic.</p>
+        <p>Here is a <span class="highlight">highlighted phrase</span> in the middle of a sentence.</p>
+
+        <figure>
+          <img src="https://via.placeholder.com/400x200" alt="Sample image">
+          <figcaption>A sample image with caption.</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h3>Subtopic Section</h3>
+        <p>This section goes into more detail about a subtopic.</p>
+      </section>
+
+      <footer>
+        <p>End of article. <span class="small-text">Thanks for reading.</span></p>
+      </footer>
+    </article>
+
+    <aside>
+      <section>
+        <h4>About the Author</h4>
+        <p>Alice is a web developer and content creator.</p>
+      </section>
+      <section>
+        <h4>Related Links</h4>
+        <ul>
+          <li><a href="#">Link One</a></li>
+          <li><a href="#">Link Two</a></li>
+          <li><a href="#">Link Three</a></li>
+        </ul>
+      </section>
+    </aside>
+  </main>
+
+</body>
+</html>
+
+

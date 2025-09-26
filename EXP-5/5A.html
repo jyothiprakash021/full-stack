@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Color Demonstration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    /* Color Names */
+    .color-name {
+      color: red; 
+      background-color: lightyellow;
+      padding: 10px;
+      border: 2px solid black;
+      margin-bottom: 10px;
+    }
+
+    /* Hexadecimal */
+    .hex-color {
+      color: #00ff00;  /* Green */
+      background-color: #f0f0f0;
+      padding: 10px;
+      border: 2px dashed #333333;
+      margin-bottom: 10px;
+    }
+
+    /* RGB */
+    .rgb-color {
+      color: rgb(0, 0, 255); /* Blue */
+      background-color: rgb(240, 240, 240);
+      padding: 10px;
+      border: 2px dotted rgb(200, 0, 0);
+      margin-bottom: 10px;
+    }
+
+    /* RGBA */
+    .rgba-color {
+      color: rgba(255, 0, 0, 0.8); 
+      background-color: rgba(0, 255, 0, 0.2); 
+      padding: 10px;
+      border: 2px solid rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+    }
+
+    /* HSL */
+    .hsl-color {
+      color: hsl(120, 100%, 30%); /* Dark Green */
+      background-color: hsl(60, 100%, 90%); /* Light Yellow */
+      padding: 10px;
+      border: 2px solid hsl(0, 0%, 30%);
+      margin-bottom: 10px;
+    }
+
+    /* HSLA */
+    .hsla-color {
+      color: hsla(240, 100%, 50%, 1); /* Blue */
+      background-color: hsla(0, 100%, 50%, 0.1); /* Transparent red */
+      padding: 10px;
+      border: 2px solid hsla(120, 100%, 20%, 0.6);
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Color Demonstration</h1>
+
+  <p class="color-name">This uses a Color Name (red text).</p>
+  <p class="hex-color">This uses a Hexadecimal Color (#00ff00).</p>
+  <p class="rgb-color">This uses an RGB Color (rgb(0,0,255)).</p>
+  <p class="rgba-color">This uses an RGBA Color (rgba with transparency).</p>
+  <p class="hsl-color">This uses an HSL Color (hsl(120,100%,30%)).</p>
+  <p class="hsla-color">This uses an HSLA Color (hsla with transparency).</p>
+
+</body>
+</html>
+

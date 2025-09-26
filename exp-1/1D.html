@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Thumbnail Image Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f5f5f5;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .gallery a {
+      border: 2px solid #ccc;
+      display: inline-block;
+      overflow: hidden;
+      border-radius: 8px;
+      transition: border-color 0.3s ease;
+    }
+    .gallery a:hover {
+      border-color: #0077cc;
+    }
+    .gallery img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Thumbnail Image Gallery</h1>
+
+  <div class="gallery">
+    <a href="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=800&q=80" target="_blank" rel="noopener noreferrer">
+      <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=100&q=80" alt="Tree 1" />
+    </a>
+    <a href="https://images.unsplash.com/photo-1473773508845-188df298d2d1?auto=format&fit=crop&w=800&q=80" target="_blank" rel="noopener noreferrer">
+      <img src="https://images.unsplash.com/photo-1473773508845-188df298d2d1?auto=format&fit=crop&w=100&q=80" alt="Tree 2" />
+    </a>
+    <a href="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80" target="_blank" rel="noopener noreferrer">
+      <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=100&q=80" alt="Tree 3" />
+    </a>
+    <a href="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80" target="_blank" rel="noopener noreferrer">
+      <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=100&q=80" alt="Tree 4" />
+    </a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Background Image Example</title>
+<style>
+  body {
+    margin: 0;
+    height: 200vh;
+    position: relative;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Removed rotation */
+    width: 400px;
+    height: 300px;
+    background-image: url("https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+</style>
+</head>
+<body>
+
+<h1>Scroll down to see the effect</h1>
+<p>Background image stays fixed and straight.</p>
+<p>It looks like you uploaded an image of a road with autumn trees and fallen leaves</p>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Department of Information Technology - Time Table</title>
+<style>
+  :root{
+    --accent:#0b4f8c;
+    --muted:#444;
+    --border:#222;
+    --header-bg:#f3f6fb;
+    --table-bg:#ffffff;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  body{
+    margin:20px;
+    background:#f7f8fb;
+    color:var(--muted);
+    -webkit-font-smoothing:antialiased;
+  }
+  .container{
+    max-width:1100px;
+    margin:0 auto;
+    background:var(--table-bg);
+    border:2px solid var(--border);
+    box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    padding:18px;
+  }
+  header{
+    text-align:center;
+    margin-bottom:12px;
+  }
+  header h1{
+    margin:0;
+    font-size:18px;
+    letter-spacing:0.6px;
+    color:var(--accent);
+  }
+  header .sub{
+    margin-top:6px;
+    font-size:13px;
+    color:#222;
+    font-weight:600;
+  }
+  header .meta{
+    font-size:12px;
+    margin-top:4px;
+    color:#333;
+  }
+  table.timetable{
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;
+    font-size:13px;
+  }
+  table.timetable thead th{
+    background:linear-gradient(#ffffff,#f3f6fb);
+    border:1px solid var(--border);
+    padding:8px 6px;
+    text-align:center;
+    font-weight:700;
+    font-size:13px;
+    vertical-align:middle;
+  }
+  table.timetable tbody td{
+    border:1px solid var(--border);
+    padding:8px 6px;
+    text-align:center;
+    vertical-align:middle;
+    min-height:38px;
+    word-wrap:break-word;
+  }
+  .period{
+    background:#eef6ff;
+    font-weight:700;
+    color:#013a63;
+  }
+  .break{
+    background:#fff3e6;
+    font-weight:700;
+    color:#7a4a00;
+  }
+  .day-col{
+    text-align:left;
+    padding-left:10px;
+    font-weight:700;
+    background:#fafafa;
+  }
+  .note{
+    margin-top:10px;
+    font-size:12px;
+    color:#333;
+  }
+  .table-wrap{
+    overflow-x:auto;
+  }
+  caption{
+    caption-side:top;
+    font-weight:700;
+    font-size:14px;
+    padding-bottom:8px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Department of Information Technology</h1>
+      <div class="sub">ACADEMIC YEAR 2025 - 2026</div>
+      <div class="meta">TIME TABLE (Semester V, Section A, Room No: 14109)</div>
+    </header>
+    <div class="table-wrap">
+      <table class="timetable" aria-label="Time Table Semester V Section A">
+        <thead>
+          <tr>
+            <th>Day / Period</th>
+            <th class="period">09:00 - 10:00</th>
+            <th class="period">10:00 - 11:00</th>
+            <th class="period">11:10 - 12:10</th>
+            <th class="period">12:10 - 13:10</th>
+            <th class="break">13:10 - 14:10 (Lunch)</th>
+            <th class="period">14:10 - 15:10</th>
+            <th class="period">15:10 - 16:30</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="day-col">MONDAY</td>
+            <td>Advanced JAVA</td>
+            <td>AOR</td>
+            <td>AT&CD</td>
+            <td>CN</td>
+            <td class="break">LUNCH</td>
+            <td>Laboratory (Java Lab)</td>
+            <td>Laboratory (Java Lab)</td>
+          </tr>
+          <tr>
+            <td class="day-col">TUESDAY</td>
+            <td>AT&CD</td>
+            <td>Advanced Java</td>
+            <td>DWDM</td>
+            <td>AOR</td>
+            <td class="break">LUNCH</td>
+            <td>Computer Network</td>
+            <td>TLP LAB</td>
+          </tr>
+          <tr>
+            <td class="day-col">WEDNESDAY</td>
+            <td>AJ</td>
+            <td>CN</td>
+            <td>AOR</td>
+            <td>TT</td>
+            <td class="break">LUNCH</td>
+            <td>CN Lab</td>
+            <td>CN Lab</td>
+          </tr>
+          <tr>
+            <td class="day-col">THURSDAY</td>
+            <td>Communication Skills</td>
+            <td>Communication Skill</td>
+            <td>AT&CD</td>
+            <td>AOR</td>
+            <td class="break">LUNCH</td>
+            <td>AJ</td>
+            <td>DWDM</td>
+          </tr>
+          <tr>
+            <td class="day-col">FRIDAY</td>
+            <td>DWDM</td>
+            <td>CN</td>
+            <td>Flutter Lab</td>
+            <td>Flutter Lab</td>
+            <td class="break">LUNCH</td>
+            <td>Aptitude</td>
+            <td>Aptitude</td>
+          </tr>
+          <tr>
+            <td class="day-col">SATURDAY</td>
+            <td>CN Class</td>
+            <td>FSD Class (Computer Lab)</td>
+            <td>FSD Lab</td>
+            <td>FSD Lab</td>
+            <td class="break">LUNCH</td>
+            <td>DWDM</td>
+            <td>AT&CD</td>
+          </tr>
+        </tbody>
+      </table>
+   
+</body>
+</html>

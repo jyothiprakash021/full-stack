@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Box Model Example</title>
+<style>
+  .box {
+    width: 200px;              /* Content width */
+    height: 100px;             /* Content height */
+    padding: 20px;             /* Space between content and border */
+    border: 5px solid blue;    /* Border thickness and color */
+    margin: 30px;              /* Space outside the border */
+    background-color: lightyellow; /* Content background */
+    box-sizing: content-box;   /* Default box model */
+  }
+
+  /* Optional: Add labels for visualization */
+  .box::before {
+    content: "content:Box model";
+    display: block;
+    text-align: center;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<h2>CSS Box Model Demonstration</h2>
+<p>Observe how content, padding, border, and margin affect the box size and spacing.</p>
+
+<div class="box"></div>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hyperlink Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        h1 {
+            color: #925c2a;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Working with Hyperlinks in HTML</h1>
+
+    <p>This page demonstrates how to use the <code>&lt;a&gt;</code> tag with <code>href</code> and <code>target</code> attributes.</p>
+
+    <h2>Examples:</h2>
+
+    <p>
+        <strong>1. Open in the same tab (default):</strong><br>
+        <a href="https://www.google.org">Visit Google</a>
+    </p>
+
+   
+    <p>
+        <strong>2. Open in a new tab using <code>target="_blank"</code>:</strong><br>
+        <a href="https://www.openai.com" target="_blank">Visit OpenAI</a>
+    </p>
+
+   
+    <p>
+        <strong>3. Link to a section in this page:</strong><br>
+        <a href="#section2">Go to Section 2</a>
+    </p>
+
+    <hr>
+
+    <h2 id="section2">Section 2: Internal Link Target</h2>
+    <p>This section is linked from the hyperlink above using an internal anchor.</p>
+
+</body>
+</html>

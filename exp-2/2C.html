@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+
+    <h2 style="text-align:center;">Registration Form</h2>
+
+    <form action="#" method="POST">
+        <table border="1" cellpadding="10" cellspacing="5" style="margin: 0 auto; width: 50%;">
+            <tr>
+                <th colspan="2">Personal Information</th>
+            </tr>
+            <tr>
+                <td>Full Name:</td>
+                <td><input type="text" name="fullname" required></td>
+            </tr>
+            <tr>
+                <td>Email Address:</td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td><input type="number" name="phone" required></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date" name="dob" required></td>
+            </tr>
+
+            <tr>
+                <th colspan="2">Gender</th>
+            </tr>
+            <tr>
+                <td>Male</td>
+                <td><input type="radio" name="gender" value="male" required> Male</td>
+            </tr>
+            <tr>
+                <td>Female</td>
+                <td><input type="radio" name="gender" value="female" required> Female</td>
+            </tr>
+
+            <tr>
+                <th colspan="2">Languages Known</th>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td><input type="checkbox" name="language" value="English"> English</td>
+            </tr>
+            <tr>
+                <td>Telugu</td>
+                <td><input type="checkbox" name="language" value="Telugu"> Telugu</td>
+            </tr>
+            <tr>
+                <td>Hindi</td>
+                <td><input type="checkbox" name="language" value="Hindi"> Hindi</td>
+            </tr>
+
+            <tr>
+                <th colspan="2">Country</th>
+            </tr>
+            <tr>
+                <td>Select Country:</td>
+                <td>
+                    <select name="country" required>
+                        <option value="india">India</option>
+                        <option value="us">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="canada">Canada</option>
+                        <option value="australia">Australia</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="2">Additional Information</th>
+            </tr>
+            <tr>
+                <td>Message:</td>
+                <td><textarea name="message" rows="4" cols="50" placeholder="Write your message here..."></textarea></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
