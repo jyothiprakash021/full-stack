@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Object Example</title>
+</head>
+<body>
+    <h2>Math Object Example</h2>
+    <button onclick="mathOperations()">Show Math Operations</button>
+    <div id="output"></div>
+
+    <script>
+        function mathOperations() {
+            const output = document.getElementById('output');
+            let result = "";
+
+            let num = 9.7;
+
+            result += "Number: " + num + "<br>";
+            result += "Math.PI: " + Math.PI + "<br>";
+            result += "Math.round(): " + Math.round(num) + "<br>";
+            result += "Math.floor(): " + Math.floor(num) + "<br>";
+            result += "Math.ceil(): " + Math.ceil(num) + "<br>";
+            result += "Math.sqrt(): " + Math.sqrt(16) + "<br>";
+            result += "Math.abs(): " + Math.abs(-10) + "<br>";
+            result += "Math.pow(): " + Math.pow(2, 3) + "<br>";
+            result += "Math.min(): " + Math.min(5, 10, 2, 8) + "<br>";
+            result += "Math.max(): " + Math.max(5, 10, 2, 8) + "<br>";
+            result += "Random number (0 to 1): " + Math.random().toFixed(3) + "<br>";
+
+            output.innerHTML = result;
+        }
+    </script>
+</body>
+</html>

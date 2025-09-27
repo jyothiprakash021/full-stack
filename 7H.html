@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User-Defined Object Example</title>
+</head>
+<body>
+    <h2>User-Defined Object Example</h2>
+    <button onclick="createAndDisplayPerson()">Create and Display Person</button>
+    <div id="output"></div>
+
+    <script>
+        function Person(firstName, lastName, age) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this._age = age;
+
+            this.display = function() {
+                return `Name: ${this.firstName} ${this.lastName} <br> Age: ${this._age} <br> Full Name: ${this.fullName}`;
+            };
+        }
+
+        Object.defineProperty(Person.prototype, 'age', {
+            get: function() {
+                return this._age;
+            },
+            set: function(value) {
+                if (value >= 0 && value <= 120) {
+                    this._age = value;
+                } else {
+                    alert("Please enter a valid age between 0 and 120.");
+                }
+            }
+        });
+
+        Object.defineProperty(Person.prototype, 'fullName', {
+            get: function() {
+                return `${this.firstName} ${this.lastName}`;
+            }
+        });
+
+        function createAndDisplayPerson() {
+            const person1 = new Person("John", "Doe", 30);
+            person1.age = 35;
+            const output = document.getElementById('output');
+            output.innerHTML = person1.display();
+        }
+    </script>
+</body>
+</html>

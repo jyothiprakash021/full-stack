@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Object Example - Alternative</title>
+</head>
+<body>
+    <h2>String Object Example - Alternative</h2>
+    <button onclick="stringOperations()">Show String Operations</button>
+    <div id="output"></div>
+
+    <script>
+        function stringOperations() {
+            const output = document.getElementById('output');
+            const text = "Hello, World!";
+
+            const length = text.length;
+            const upper = text.toUpperCase();
+            const lower = text.toLowerCase();
+            const charAt7 = text.charAt(7);
+            const indexWorld = text.indexOf("World");
+            const substring = text.substring(7, 12);
+            const slice = text.slice(7, 12);
+            const replaced = text.replace("World", "JavaScript");
+            const includesHello = text.includes("Hello");
+            const startsHello = text.startsWith("Hello");
+            const endsExclamation = text.endsWith("!");
+
+            const result = `
+                Original string: ${text} <br>
+                Length: ${length} <br>
+                To Upper Case: ${upper} <br>
+                To Lower Case: ${lower} <br>
+                Char at index 7: ${charAt7} <br>
+                Index of 'World': ${indexWorld} <br>
+                Substring (7, 12): ${substring} <br>
+                Slice (7, 12): ${slice} <br>
+                Replace 'World' with 'JavaScript': ${replaced} <br>
+                Includes 'Hello': ${includesHello} <br>
+                Starts with 'Hello': ${startsHello} <br>
+                Ends with '!': ${endsExclamation} <br>
+            `;
+
+            output.innerHTML = result;
+        }
+    </script>
+</body>
+</html>
