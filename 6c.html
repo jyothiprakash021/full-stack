@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Different Ways to Take Input</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, button {
+      padding: 8px;
+      margin-top: 5px;
+      width: 300px;
+    }
+    #output {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #333;
+      background-color: #f0f0f0;
+      max-width: 320px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Different Ways to Take Input</h2>
+
+<label for="nameInput">Enter your name:</label>
+<input type="text" id="nameInput" placeholder="Your name">
+
+<label for="ageInput">Enter your age:</label>
+<input type="number" id="ageInput" placeholder="Your age">
+
+<label for="numbersInput">Enter numbers separated by space:</label>
+<input type="text" id="numbersInput" placeholder="e.g. 5 10 15">
+
+<button onclick="showInput()">Submit</button>
+
+<div id="output"></div>
+
+<script>
+  function showInput() {
+    const name = document.getElementById('nameInput').value;
+    const age = document.getElementById('ageInput').value;
+    const numbersText = document.getElementById('numbersInput').value;
+
+    const numbers = numbersText.split(' ').map(num => Number(num));
+
+    let outputText = '';
+    outputText += `Hello, ${name}<br>`;
+    outputText += `You are ${age} years old.<br>`;
+    outputText += `Numbers you entered: ${numbers.join(', ')}`;
+
+    document.getElementById('output').innerHTML = outputText;
+  }
+</script>
+
+</body>
+</html>
