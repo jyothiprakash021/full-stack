@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Object Example</title>
+</head>
+<body>
+    <h2>Date Object Example</h2>
+    <button onclick="showDateInfo()">Show Date Info</button>
+    <div id="output"></div>
+
+    <script>
+        function showDateInfo() {
+            const output = document.getElementById('output');
+            const now = new Date();
+
+            const year = now.getFullYear();
+            const month = now.getMonth() + 1;
+            const date = now.getDate();
+            const day = now.getDay();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+            const milliseconds = now.getMilliseconds();
+            const time = now.getTime();
+
+            const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+            let result = `
+                Current Date and Time: ${now} <br>
+                Year: ${year} <br>
+                Month: ${month} <br>
+                Date: ${date} <br>
+                Day of the Week: ${daysOfWeek[day]} <br>
+                Hours: ${hours} <br>
+                Minutes: ${minutes} <br>
+                Seconds: ${seconds} <br>
+                Milliseconds: ${milliseconds} <br>
+                Time (ms since Jan 1, 1970): ${time} <br><br>
+            `;
+
+            const newDate = new Date();
+            newDate.setFullYear(2025);
+            newDate.setMonth(11);
+            newDate.setDate(25);
+            newDate.setHours(10);
+            newDate.setMinutes(30);
+            newDate.setSeconds(0);
+
+            result += `New Date Set To: ${newDate}`;
+
+            output.innerHTML = result;
+        }
+    </script>
+</body>
+</html>

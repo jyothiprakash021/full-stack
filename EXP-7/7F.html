@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RegExp Object Example</title>
+</head>
+<body>
+    <h2>RegExp Object Example</h2>
+    <input type="text" id="inputText" placeholder="Enter some text">
+    <button onclick="testRegex()">Test Regex</button>
+    <div id="output"></div>
+
+    <script>
+        function testRegex() {
+            const output = document.getElementById('output');
+            const text = document.getElementById('inputText').value;
+
+            const regex = /a\w*/gi;
+
+            let source = regex.source;
+            let flags = regex.flags;
+            let global = regex.global;
+            let ignoreCase = regex.ignoreCase;
+            let multiline = regex.multiline;
+
+            let testResult = regex.test(text);
+            regex.lastIndex = 0;
+
+            let execResult = regex.exec(text);
+
+            let matches = text.match(regex);
+
+            let result = `
+                Regex pattern: ${source} <br>
+                Flags: ${flags} <br>
+                Global: ${global} <br>
+                Ignore Case: ${ignoreCase} <br>
+                Multiline: ${multiline} <br><br>
+
+                Test if pattern exists in text: ${testResult} <br>
+                First exec() match: ${execResult ? execResult[0] : 'No match'} <br>
+                All matches using match(): ${matches ? matches.join(', ') : 'No matches'} <br>
+            `;
+
+            output.innerHTML = result;
+        }
+    </script>
+</body>
+</html>

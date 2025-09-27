@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Object Example</title>
+</head>
+<body>
+    <h2>Array Object Example</h2>
+    <button onclick="arrayOperations()">Show Array Operations</button>
+    <div id="output"></div>
+
+    <script>
+        function arrayOperations() {
+            const output = document.getElementById('output');
+            
+            let fruits = ["Apple", "Banana", "Cherry"];
+            let result = "";
+
+            result += "Initial array: " + fruits.join(", ") + "<br>";
+            result += "Length of array: " + fruits.length + "<br>";
+
+            fruits.push("Dragonfruit");
+            result += "After push(): " + fruits.join(", ") + "<br>";
+
+            let popped = fruits.pop();
+            result += "After pop() (removed " + popped + "): " + fruits.join(", ") + "<br>";
+
+            let shifted = fruits.shift();
+            result += "After shift() (removed " + shifted + "): " + fruits.join(", ") + "<br>";
+
+            fruits.unshift("Mango");
+            result += "After unshift(): " + fruits.join(", ") + "<br>";
+
+            let index = fruits.indexOf("Banana");
+            result += "Index of Banana: " + index + "<br>";
+
+            let sliced = fruits.slice(1, 3);
+            result += "Sliced array (1 to 3): " + sliced.join(", ") + "<br>";
+
+            let joined = fruits.join(" - ");
+            result += "Joined array: " + joined + "<br>";
+
+            output.innerHTML = result;
+        }
+    </script>
+</body>
+</html>
