@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Voter Eligibility</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .eligible {
+      color: green;
+      font-weight: bold;
+    }
+    .not-eligible {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Voter Information</h2>
+
+<table id="voterTable">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Eligibility</th>
+  </tr>
+</table>
+
+<script>
+  const name = prompt("Enter your name:");
+  const age = prompt("Enter your age:");
+
+  const ageNum = parseInt(age);
+  let eligibility = "";
+  let eligibilityClass = "";
+
+  if (!isNaN(ageNum) && ageNum >= 18) {
+    eligibility = "Eligible to Vote";
+    eligibilityClass = "eligible";
+  } else {
+    eligibility = "Not Eligible to Vote";
+    eligibilityClass = "not-eligible";
+  }
+
+  const table = document.getElementById("voterTable");
+  const row = table.insertRow();
+  
+  const cell1 = row.insertCell(0);
+  const cell2 = row.insertCell(1);
+  const cell3 = row.insertCell(2);
+
+  cell1.textContent = name || "N/A";
+  cell2.textContent = age || "N/A";
+  cell3.textContent = eligibility;
+  cell3.className = eligibilityClass;
+</script>
+
+</body>
+</html>
+
