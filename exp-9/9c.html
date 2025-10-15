@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registration Validation</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 400px; margin: auto; }
+    input { display: block; margin-bottom: 15px; padding: 8px; width: 100%; }
+    .error { color: red; margin-bottom: 15px; }
+  </style>
+</head>
+<body>
+
+  <h2>Registration Form</h2>
+
+  <form id="registrationForm" onsubmit="return validateForm()">
+    <label>Name:</label>
+    <input type="text" id="name" name="name" />
+
+    <label>Mobile:</label>
+    <input type="text" id="mobile" name="mobile" />
+
+    <label>Email:</label>
+    <input type="text" id="email" name="email" />
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="errorMessages" class="error"></div>
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById('name').value.trim();
+      const mobile = document.getElementById('mobile').value.trim();
+      const email = document.getElementById('email').value.trim();
+      let errors = [];
+
+      if (!/^[A-Za-z][A-Za-z0-9]{5,}$/.test(name)) {
+        errors.push("Name must start with an alphabet and be at least 6 characters long, containing only letters and numbers.");
+      }
+
+      if (!/^\d{10}$/.test(mobile)) {
+        errors.push("Mobile number must be exactly 10 digits.");
+      }
+
+      if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+        errors.push("Email must be in a valid format like example@domain.com.");
+      }
+
+      const errorDiv = document.getElementById('errorMessages');
+      if (errors.length > 0) {
+        errorDiv.innerHTML = errors.join("<br>");
+        return false;
+      }
+
+      errorDiv.innerHTML = "";
+      alert("Registration successful!");
+      return true;
+    }
+  </script>
+
+</body>
+</html>
+

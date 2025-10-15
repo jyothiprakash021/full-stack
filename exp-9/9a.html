@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Number Functions</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    input, button { padding: 8px; margin: 5px 0; }
+    #result { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <h2>Number Functions and Events</h2>
+
+  <input type="text" id="numberInput" placeholder="Enter a number or text" />
+  <br />
+
+  <button onclick="displayFactorial()">Factorial</button>
+  <button onclick="displayFibonacci()">Fibonacci Series</button>
+  <button onclick="displayPrimes()">Prime Numbers</button>
+  <button onclick="displayPalindrome()">Palindrome Check</button>
+
+  <div id="result"></div>
+
+  <script>
+    function factorial(n) {
+      if (n < 0) return "Undefined for negative numbers";
+      let fact = 1;
+      for (let i = 2; i <= n; i++) {
+        fact *= i;
+      }
+      return fact;
+    }
+
+    function fibonacci(n) {
+      let series = [];
+      let a = 0, b = 1;
+      while (a <= n) {
+        series.push(a);
+        [a, b] = [b, a + b];
+      }
+      return series.join(", ");
+    }
+
+    function isPrime(num) {
+      if (num <= 1) return false;
+      if (num <= 3) return true;
+      if (num % 2 === 0 || num % 3 === 0) return false;
+      for (let i = 5; i * i <= num; i += 6) {
+        if (num % i === 0 || num % (i + 2) === 0) return false;
+      }
+      return true;
+    }
+
+    function primesUpTo(n) {
+      let primes = [];
+      for (let i = 2; i <= n; i++) {
+        if (isPrime(i)) primes.push(i);
+      }
+      return primes.join(", ");
+    }
+
+    function isPalindrome(value) {
+      let str = value.toString();
+      let reversed = str.split("").reverse().join("");
+      return str === reversed;
+    }
+
+    function getNumberInput() {
+      const val = document.getElementById("numberInput").value.trim();
+      if (val === "") return null;
+      if (!isNaN(val)) return Number(val);
+      return val; // for palindrome, allow string input
+    }
+
+    function displayFactorial() {
+      const val = getNumberInput();
+      if (val === null || isNaN(val)) {
+        document.getElementById("result").textContent = "Please enter a valid number for factorial.";
+        return;
+      }
+      document.getElementById("result").textContent = `Factorial of ${val} is ${factorial(val)}.`;
+    }
+
+    function displayFibonacci() {
+      const val = getNumberInput();
+      if (val === null || isNaN(val)) {
+        document.getElementById("result").textContent = "Please enter a valid number for Fibonacci series.";
+        return;
+      }
+      document.getElementById("result").textContent = `Fibonacci series up to ${val}: ${fibonacci(val)}.`;
+    }
+
+    function displayPrimes() {
+      const val = getNumberInput();
+      if (val === null || isNaN(val)) {
+        document.getElementById("result").textContent = "Please enter a valid number for prime numbers.";
+        return;
+      }
+      document.getElementById("result").textContent = `Prime numbers up to ${val}: ${primesUpTo(val)}.`;
+    }
+
+    function displayPalindrome() {
+      const val = getNumberInput();
+      if (val === null || val === "") {
+        document.getElementById("result").textContent = "Please enter a value for palindrome check.";
+        return;
+      }
+      const result = isPalindrome(val) ? "is a palindrome" : "is NOT a palindrome";
+      document.getElementById("result").textContent = `"${val}" ${result}.`;
+    }
+  </script>
+  
+</body>
+</html>
