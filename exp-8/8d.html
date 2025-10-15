@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Looping</title>
+    <script>
+        function showObjectData() {
+            const data = {
+                brand: "Tesla",
+                model: "Model 3",
+                year: 2022
+            };
+
+            let forInResult = "for-in loop:\n";
+            for (let key in data) {
+                forInResult += key + ": " + data[key] + "\n";
+            }
+
+            let keysArray = Object.keys(data);
+            let forEachResult = "forEach loop:\n";
+            keysArray.forEach(key => {
+                forEachResult += key + ": " + data[key] + "\n";
+            });
+
+            let entriesArray = Object.entries(data);
+            let forOfResult = "for-of loop:\n";
+            for (const [key, value] of entriesArray) {
+                forOfResult += key + ": " + value + "\n";
+            }
+
+            alert(forInResult + "\n" + forEachResult + "\n" + forOfResult);
+            document.getElementById("result").textContent = forInResult + "\n" + forEachResult + "\n" + forOfResult;
+        }
+    </script>
+</head>
+<body onload="showObjectData()">
+    <pre id="result"></pre>
+</body>
+</html>

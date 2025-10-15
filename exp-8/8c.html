@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Print 1 to 10</title>
+    <script>
+        function printUsingFor() {
+            let output = "Using for loop: ";
+            for(let i = 1; i <= 10; i++) {
+                output += i + " ";
+            }
+            document.getElementById("forLoop").textContent = output;
+        }
+
+        function printUsingWhile() {
+            let output = "Using while loop: ";
+            let i = 1;
+            while(i <= 10) {
+                output += i + " ";
+                i++;
+            }
+            document.getElementById("whileLoop").textContent = output;
+        }
+
+        function printUsingDoWhile() {
+            let output = "Using do-while loop: ";
+            let i = 1;
+            do {
+                output += i + " ";
+                i++;
+            } while(i <= 10);
+            document.getElementById("doWhileLoop").textContent = output;
+        }
+
+        function printAll() {
+            printUsingFor();
+            printUsingWhile();
+            printUsingDoWhile();
+        }
+    </script>
+</head>
+<body onload="printAll()">
+    <p id="forLoop"></p>
+    <p id="whileLoop"></p>
+    <p id="doWhileLoop"></p>
+</body>
+</html>

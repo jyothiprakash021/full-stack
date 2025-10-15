@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Larger Number</title>
+    <script>
+        function getAndShowLargerNumber() {
+            let num1 = parseInt(prompt("Enter the first integer:"));
+            let num2 = parseInt(prompt("Enter the second integer:"));
+            let num3 = parseInt(prompt("Enter the third integer:"));
+
+            let message = "";
+
+            if (num1 === num2 && num2 === num3) {
+                message = "EQUAL NUMBERS";
+            } else {
+                let larger = Math.max(num1, num2, num3);
+                message = larger + " LARGER NUMBER";
+            }
+
+            alert(message);
+            document.getElementById("result").textContent = message;
+        }
+    </script>
+</head>
+<body onload="getAndShowLargerNumber()">
+    <h1 id="result"></h1>
+</body>
+</html>
+

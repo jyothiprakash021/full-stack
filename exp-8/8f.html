@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Denomination Calculator</title>
+    <script>
+        function calculateDenominations() {
+            let amount = parseInt(prompt("Enter the amount deposited:"));
+            let denominations = [100, 50, 20, 10, 5, 2, 1];
+            let result = [];
+
+            for (let denom of denominations) {
+                let count = Math.floor(amount / denom);
+                if (count > 0) {
+                    result.push(`${count} - ${denom}'s`);
+                    amount %= denom;
+                }
+            }
+
+            let message = result.join(', ');
+            alert("Denominations: " + message);
+            document.getElementById("result").textContent = message;
+        }
+    </script>
+</head>
+<body onload="calculateDenominations()">
+    <h1 id="result"></h1>
+</body>
+</html>
